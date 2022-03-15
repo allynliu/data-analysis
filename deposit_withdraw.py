@@ -27,10 +27,6 @@ last1d = get_lastday(1)
 last2d = get_lastday(2)
 last7d = get_lastday(7)
 
-# last1d = (datetime.today() + timedelta(-1)).strftime('%Y-%m-%d')
-# last2d = (datetime.today() + timedelta(-2)).strftime('%Y-%m-%d')
-# last7d= (datetime.today() + timedelta(-7)).strftime('%Y-%m-%d')
-
 # # V2数据库
 # v2_db = pymysql.connect(host='172.28.12.187',
 #                         port=6668,
