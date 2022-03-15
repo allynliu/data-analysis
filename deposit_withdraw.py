@@ -19,10 +19,17 @@ plt.rc('font',family='SimHei',size='12')# 解决中文不能正常显示的问�
 
 # 获取前一天日期
 from datetime import timedelta, datetime
-last0d = (datetime.today() + timedelta(0)).strftime('%Y-%m-%d')
-last1d = (datetime.today() + timedelta(-1)).strftime('%Y-%m-%d')
-last2d = (datetime.today() + timedelta(-2)).strftime('%Y-%m-%d')
-last7d= (datetime.today() + timedelta(-7)).strftime('%Y-%m-%d')
+def get_lastday(num):
+    dt=(datetime.today() + timedelta(-num)).strftime('%Y-%m-%d')
+    return dt
+last0d = get_lastday(0)
+last1d = get_lastday(1)
+last2d = get_lastday(2)
+last7d = get_lastday(7)
+
+# last1d = (datetime.today() + timedelta(-1)).strftime('%Y-%m-%d')
+# last2d = (datetime.today() + timedelta(-2)).strftime('%Y-%m-%d')
+# last7d= (datetime.today() + timedelta(-7)).strftime('%Y-%m-%d')
 
 # # V2数据库
 # v2_db = pymysql.connect(host='172.28.12.187',
